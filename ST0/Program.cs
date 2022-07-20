@@ -1,5 +1,5 @@
-﻿Console.WriteLine("Добро пожаловать, здесь вы сможете найти квадрат любого числа быстро и просто!)))");
-Console.WriteLine("Введите число:");
+﻿Console.WriteLine("Welcome, here you can find the square of any number quickly and easily!)))");
+Console.WriteLine("Enter a number:");
 string? inputLine = Console.ReadLine();
 if(inputLine != null)
 {
@@ -7,6 +7,6 @@ if(inputLine != null)
 
     ///int outNumber = inputNumber*inputNumber;
     int outNumber = (int)Math.Pow(inputNumber,2);
-    Console.WriteLine("Квадрат числа:");
+    Console.WriteLine("The square of the number:");
     Console.WriteLine(outNumber);
 }
