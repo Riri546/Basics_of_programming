@@ -1,0 +1,15 @@
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\bin\Debug\net6.0\ST0.exe
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\bin\Debug\net6.0\ST0.deps.json
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\bin\Debug\net6.0\ST0.runtimeconfig.json
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\bin\Debug\net6.0\ST0.dll
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\bin\Debug\net6.0\ST0.pdb
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.csproj.AssemblyReference.cache
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.AssemblyInfoInputs.cache
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.AssemblyInfo.cs
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.csproj.CoreCompileInputs.cache
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.dll
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\refint\ST0.dll
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.pdb
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ST0.genruntimeconfig.cache
+C:\Users\LLosh\OneDrive\Рабочий стол\IT\Basics_of_programming\ST0\obj\Debug\net6.0\ref\ST0.dll
