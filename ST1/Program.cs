@@ -1,4 +1,7 @@
-﻿string? inputLineOne = Console.ReadLine();
+﻿Console.WriteLine("Let's check if the first number is the square of the second one?))");
+Console.WriteLine("Enter the first number:");
+string? inputLineOne = Console.ReadLine();
+Console.WriteLine("Enter the second number:");
 string? inputLineTwo = Console.ReadLine();
 
 if(inputLineOne != null && inputLineTwo != null){
@@ -13,10 +16,10 @@ if(inputLineOne != null && inputLineTwo != null){
     //Console.WriteLine("No");
     //}
     if (inputNumberTwo == Math.Sqrt(inputNumberOne)){
-        Console.WriteLine("Yes");
+        Console.WriteLine("Constitute");
     }
     else
     {
-        Console.WriteLine("No");
+        Console.WriteLine("Is not");
     }
 }
