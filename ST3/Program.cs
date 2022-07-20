@@ -6,17 +6,17 @@ if(inputLineOne != null)
 {
     int inputNumber = int.Parse(inputLineOne);
 
-    int startNumber = (inputNumber * -1);
+    int startNumber = 1;
 
-    string lineOutput = "";
+    string lineOutput = "0";
 
-    while (startNumber < inputNumber)
+    while (startNumber <= inputNumber)
     {
-        lineOutput = lineOutput+startNumber+", ";
+        lineOutput = startNumber*(-1)+", "+lineOutput+", "+startNumber;
         startNumber++;
     }
         
-    lineOutput = lineOutput+inputNumber; 
+//  lineOutput = lineOutput+inputNumber; 
 
     Console.WriteLine(lineOutput);
 }
