@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 
-Console.WriteLine("Enter a three-digit number:");
+Console.Write("Enter a three-digit number:");
 
 // string inputLine = Console.ReadLine();
         
