@@ -1,7 +1,11 @@
-﻿Console.WriteLine("Let's check if the first number is the square of the second one?))");
-Console.WriteLine("Enter the first number:");
+﻿Console.Clear();
+
+Console.WriteLine("Let's check if the first number is the square of the second one?))");
+
+Console.Write("Enter the first number: ");
 string? inputLineOne = Console.ReadLine();
-Console.WriteLine("Enter the second number:");
+
+Console.Write("Enter the second number: ");
 string? inputLineTwo = Console.ReadLine();
 
 if(inputLineOne != null && inputLineTwo != null){

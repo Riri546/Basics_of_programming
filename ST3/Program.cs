@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Enter an integer");
+﻿Console.Clear();
+
+Console.WriteLine("Enter an integer");
 
 string? inputLineOne = Console.ReadLine();
 

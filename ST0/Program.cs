@@ -1,5 +1,7 @@
-﻿Console.WriteLine("Welcome, here you can find the square of any number quickly and easily!)))");
-Console.WriteLine("Enter a number:");
+﻿Console.Clear();
+
+Console.WriteLine("Welcome, here you can find the square of any number quickly and easily!)))");
+Console.Write("Enter a number: ");
 string? inputLine = Console.ReadLine();
 if(inputLine != null)
 {

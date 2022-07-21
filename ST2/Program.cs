@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Write down the number and I'll tell you the day of the week:");
+﻿Console.Clear();
+
+Console.Write("Write down the number and I'll tell you the day of the week: ");
 string? inputLine = Console.ReadLine();
 if(inputLine != null)
 {
