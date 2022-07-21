@@ -8,7 +8,8 @@ string? inputLineOne = Console.ReadLine();
 Console.Write("Enter the second number: ");
 string? inputLineTwo = Console.ReadLine();
 
-if (inputLineOne != null && inputLineTwo != null) {
+if (inputLineOne != null && inputLineTwo != null) 
+{
     int A = int.Parse(inputLineOne);
     int B = int.Parse(inputLineTwo);
 
