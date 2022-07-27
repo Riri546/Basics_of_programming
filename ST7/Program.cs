@@ -2,9 +2,8 @@
 
 Console.Write("Enter a number and I'll tell you if it's even:");
 
-string inputLine = Console.ReadLine();
-
-if (inputLine != null)
+string? inputLine = Console.ReadLine();
+if(inputLine != null)
     {
         int inputNumber = int.Parse(inputLine);
 
