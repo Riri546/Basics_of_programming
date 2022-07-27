@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 
-Console.WriteLine("Is the second number a multiple of the first");
+Console.WriteLine("Is the second number a multiple of the first?");
 
 Console.Write("Enter the first number: ");
 string? firstNumber = Console.ReadLine();
