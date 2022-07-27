@@ -1,7 +1,11 @@
-﻿//Problem solving method option 1
+﻿Console.Clear();
+
+//Problem solving method option 1
 
 void variant1(System.Random numberSintezator)
 {
+    Console.WriteLine("Problem solving method option 1");
+
     int number = numberSintezator.Next(10,100);
 
     Console.Write("This is a random number: ");
@@ -28,6 +32,8 @@ void variant1(System.Random numberSintezator)
 void variant2(System.Random numberSintezator)
 
 {
+    Console.WriteLine("Problem solving method option 2");
+
     int numberLili = new Random().Next(10,100);
 
     Console.Write("This is a random number: ");
@@ -50,13 +56,19 @@ void variant2(System.Random numberSintezator)
 void variant3(System.Random numberSintezator)
 
 {
+    Console.WriteLine("Problem solving method option 3");
+
     char[] digits = numberSintezator.Next(10,100).ToString().ToArray();
 
-    firstNumber = ((int)digits[0])-48;
-    secondNumber = ((int)digits[1])-48;
+    Console.Write("This is a random number: ");
+    Console.WriteLine(digits);
+
+    int firstNumber = ((int)digits[0])-48;
+    int secondNumber = ((int)digits[1])-48;
 
     int resultNumber = firstNumber>secondNumber?resultNumber=firstNumber:resultNumber=secondNumber;
 
+    Console.Write("The biggest digit is: ");
     Console.WriteLine(resultNumber);
 }
 
@@ -67,6 +79,6 @@ System.Random numberSintezator = new Random();
 
 variant1(numberSintezator);
 
-variant2();
+variant2(numberSintezator);
 
 variant3(numberSintezator);
