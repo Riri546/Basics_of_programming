@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 
-//
+//Problem solving method option 1
 
 void variant1(System.Random numberSintezator)
 
@@ -10,7 +10,7 @@ void variant1(System.Random numberSintezator)
         Console.Write("This is a random number: ");
         Console.WriteLine(number);
 
-    int firstNumber= number % 100;
+    int firstNumber = number % 100;
 
     int resultNumber = firstNumber / 10;
 
