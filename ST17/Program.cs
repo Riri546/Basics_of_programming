@@ -1,4 +1,6 @@
-﻿//Метод считывает точки и возвращает массив с ним
+﻿Console.Clear();
+
+//Метод считывает точки и возвращает массив с ним
 int[,] readPoint()
 {
     string inputLine = Console.ReadLine();
