@@ -4,7 +4,7 @@
 int[,] readPoint()
 {
     string inputLine = Console.ReadLine();
-
+    
     string coordXLine = inputLine.Substring(0,inputLine.IndexOf(";"));
     coordXLine = coordXLine.Substring(coordXLine.IndexOf("=")+1);
 
@@ -21,8 +21,6 @@ int[,] readPoint()
     arreyOut[0,1] = coordY;
 
     return arreyOut;
-    
-
 }
 
 //Печатает номер четверти
