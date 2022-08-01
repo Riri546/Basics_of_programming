@@ -1,29 +1,57 @@
 ﻿//Метод считывает точки и возвращает массив с ним
-int [,] readPoint()
+int[,] readPoint()
 {
     string inputLine = Console.ReadLine();
 
-    string coordX = inputLine.Substring(0,inputLine.IndexOf(";"));
-    coordX = coordX.Substring(coordX.IndexOf("=")+1);
+    string coordXLine = inputLine.Substring(0,inputLine.IndexOf(";"));
+    coordXLine = coordXLine.Substring(coordXLine.IndexOf("=")+1);
 
-    string coordY= inputLine.Substring(inputLine.IndexOf(";")+1);
-    coordY = coordY.Substring(coordY.IndexOf("=")+1);
+    string coordYLine= inputLine.Substring(inputLine.IndexOf(";")+1);
+    coordYLine = coordYLine.Substring(coordYLine.IndexOf("=")+1);
 
-    Console.WriteLine(coordX+" "+coordY);
+    //Console.WriteLine(coordX+" "+coordY);
 
-    return new int [1,1];
+    int coordX = int.Parse(coordXLine);
+    int coordY = int.Parse(coordYLine);
+
+    int[,] arreyOut = new int[1,2];
+    arreyOut[0,0] = coordX;
+    arreyOut[0,1] = coordY;
+
+    return arreyOut;
+    
 
 }
 
 //Печатает номер четверти
-//void ptintQuter(int[,] arrayPoint)
-//{
+void ptintQuter(int[,] arreyPoint)
+{
+    if(arreyPoint[0,0] > 0 && arreyPoint[0,1] > 0)
+    {
+    Console.WriteLine("1 четверть");
+    }
 
-//}
+    if(arreyPoint[0,0] < 0 && arreyPoint[0,1] > 0)
+    {
+    Console.WriteLine("2 четверть");
+    }
 
-//int[,] arrayPoint = readPoint();
+    if(arreyPoint[0,0] < 0 && arreyPoint[0,1] < 0)
+    {
+    Console.WriteLine("3 четверть");
+    }
 
-//printQuter(arrayPoint);
+    if(arreyPoint[0,0] > 0 && arreyPoint[0,1] < 0)
+    {
+    Console.WriteLine("4 четверть");
+    }
+        
+}
 
-//printQuter (readPoint());
+int[,] arreyPoint = readPoint();
+
+ptintQuter(arreyPoint);
+
+//ptintQuter (readPoint());
+
 
