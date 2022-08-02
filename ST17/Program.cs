@@ -28,22 +28,22 @@ void ptintQuter(int[,] arreyPoint)
 {
     if (arreyPoint[0, 0] > 0 && arreyPoint[0, 1] > 0)
     {
-        Console.WriteLine("1 четверть");
+        Console.WriteLine("1 quarter");
     }
 
     if (arreyPoint[0, 0] < 0 && arreyPoint[0, 1] > 0)
     {
-        Console.WriteLine("2 четверть");
+        Console.WriteLine("2 quarter");
     }
 
     if (arreyPoint[0, 0] < 0 && arreyPoint[0, 1] < 0)
     {
-        Console.WriteLine("3 четверть");
+        Console.WriteLine("3 quarter");
     }
 
     if (arreyPoint[0, 0] > 0 && arreyPoint[0, 1] < 0)
     {
-        Console.WriteLine("4 четверть");
+        Console.WriteLine("4 quarter");
     }
 
 }
