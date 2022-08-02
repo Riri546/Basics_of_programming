@@ -1,10 +1,15 @@
 ﻿Console.Clear();
 
 //The method reads the points and returns an array with it
-int[,] readPoint()
+Console.Write("Enter a number: ");
+string? inputLine = Console.ReadLine();
+if(inputLine != null)
 {
-    string inputLine = Console.ReadLine();
+int[,] readPoint()
 
+{
+
+    
     string coordXLine = inputLine.Substring(0, inputLine.IndexOf(";"));
     coordXLine = coordXLine.Substring(coordXLine.IndexOf("=") + 1);
 
@@ -21,6 +26,7 @@ int[,] readPoint()
     arreyOut[0, 1] = coordY;
 
     return arreyOut;
+    
 }
 
 //Prints the quarter number
@@ -54,4 +60,4 @@ ptintQuter(arreyPoint);
 
 //ptintQuter (readPoint());
 
-
+}

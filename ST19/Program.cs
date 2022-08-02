@@ -1,5 +1,7 @@
 ﻿Console.Clear();
 
+
+
 int coordXPointA;
 int coordXPointB;
 int coordYPointA;
