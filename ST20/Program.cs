@@ -12,12 +12,18 @@ if (inputLineN != null)
     string lineNN = string.Empty;
     int s = 1;
 
-    while (s <= numberN)
+    // Cycle
+    void cycle()
     {
-        lineN = lineN + s + "  ";
-        lineNN = lineNN + (s * s).ToString() + "  ";
-        s++;
+        while (s <= numberN)
+        {
+            lineN = lineN + s + "  ";
+            lineNN = lineNN + (s * s).ToString() + "  ";
+            s++;
+        }
     }
+
+    cycle();
 
     Console.WriteLine(lineN);
     Console.WriteLine(lineNN);

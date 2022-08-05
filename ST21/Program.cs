@@ -30,9 +30,9 @@ decompositionOfaNumber();
 
     if (D1 == D5 && D2 == D4)
     {
-        Console.Write("Yes");
+        Console.Write("Is a palindrome");
     }
     else
     {
-        Console.Write("No");
+        Console.Write("Is not a palindrome");
     }
