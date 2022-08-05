@@ -11,11 +11,11 @@ double lengthAB;
 
 //Reads coordinates of points A and B
 void readDataOfPoint()
-    {
+{
     Console.WriteLine("Enter the X coordinate of point A");
     coordXPointA = int.Parse(Console.ReadLine());
-    
-    
+
+
 
     Console.WriteLine("Enter the Y coordinate of point A");
     coordYPointA = int.Parse(Console.ReadLine());
@@ -27,7 +27,7 @@ void readDataOfPoint()
     coordYPointB = int.Parse(Console.ReadLine());
 
 
-    }
+}
 
 
 //Calculates the distance between points A and B

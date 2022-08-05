@@ -36,7 +36,7 @@ void readDataOfPoint()
 //вычисляет растояние между точками A и B
 void conculateLateLengthAB()
 {
-    lengthAB = Math.Sqrt(Math.Pow((coordXPointA - coordXPointB),2) + Math.Pow ((coordYPointA - coordYPointB),2) + Math.Pow ((coordZPointA - coordZPointB),2));
+    lengthAB = Math.Sqrt(Math.Pow((coordXPointA - coordXPointB), 2) + Math.Pow((coordYPointA - coordYPointB), 2) + Math.Pow((coordZPointA - coordZPointB), 2));
 }
 
 readDataOfPoint();
