@@ -5,6 +5,7 @@ string inputLine = Console.ReadLine() ?? "";
 int inputNum = int.Parse(inputLine);
 
 Console.WriteLine(sumNums(inputNum));
+Console.WriteLine(mulRec(inputNum));
 
 int sumNums(int num)
 {
