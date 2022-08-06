@@ -3,9 +3,16 @@
 Console.Write("Enter number: ");
 string inputLine = Console.ReadLine() ?? "";
 int inputNum = int.Parse(inputLine);
+int t;
 
+t = Environment.TickCount;
 Console.WriteLine(sumNums(inputNum));
+Console.WriteLine("Simple solution time: {0} ms", Environment.TickCount - t);
+
+t = Environment.TickCount;
 Console.WriteLine(mulRec(inputNum));
+Console.WriteLine("Recursive solution time: {0} ms", Environment.TickCount - t);
+
 
 int sumNums(int num)
 {
