@@ -3,10 +3,12 @@
 Console.Write("Enter number: ");
 
 string inputLineNumber = Console.ReadLine() ?? "";
-int inputNum = int.Parse(inputLineNumber);
+long inputNum = long.Parse(inputLineNumber);
+
+DateTime timePoint = DateTime.Now;
 
 //VariantSimpele
-int Variantchar()
+long Variantchar()
 {
     // int numberLength = 0;
     // char[] array = inputLineNumber.ToCharArray();
@@ -14,10 +16,10 @@ int Variantchar()
     return inputLineNumber.ToCharArray().Length;
 }
 
-int VariantSimpele()
+long VariantSimpele()
 {
-    int numberLength = 0;
-    int digits = 1;
+    long numberLength = 0;
+    long digits = 1;
 
     while (digits < inputNum)
     {
@@ -28,22 +30,29 @@ int VariantSimpele()
     return numberLength;
 }
 
-int VariantLog10()
+long VariantLog10()
 {
-    return (int)Math.Log10(inputNum)+1;
+    return (long)Math.Log10(inputNum) + 1;
 }
 
-int result = 0;
+long result = 0;
+
+timePoint = DateTime.Now;
 result = Variantchar();
 Console.Write("Length variant chsr: ");
 Console.WriteLine(result);
+Console.WriteLine(DateTime.Now - timePoint);
 
+timePoint = DateTime.Now;
 result = VariantSimpele();
 Console.Write("Length variant simle: ");
 Console.WriteLine(result);
+Console.WriteLine(DateTime.Now - timePoint);
 
+timePoint = DateTime.Now;
 result = VariantLog10();
 Console.Write("Length variant log10: ");
 Console.WriteLine(result);
+Console.WriteLine(DateTime.Now - timePoint);
 
 
