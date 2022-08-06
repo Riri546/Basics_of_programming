@@ -16,3 +16,16 @@ int sumNums(int num)
     }
     return sum;
 }
+
+int mulRec(int num)
+{
+    if (num == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return num * mulRec(num - 1);
+    }
+}
+
