@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that accepts a number as input and outputs the number of digits in the number.
+
+Console.Clear();
 
 Console.Write("Enter number: ");
 
