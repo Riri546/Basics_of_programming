@@ -23,7 +23,7 @@ void Read()
 //solution using the method
 void VariantMethod()
 {
-    degreeAB = (int) Math.Pow(number1,number2);
+    degreeAB = (int)Math.Pow(number1, number2);
 
     t = Environment.TickCount;
     Console.WriteLine("Solution using the method: " + degreeAB);
@@ -35,13 +35,13 @@ void VariantCycle()
 {
     degreeAB = 1;
     for (int i = 0; i < number2; i++)
-{
-    degreeAB = degreeAB * number1;
-}
+    {
+        degreeAB = degreeAB * number1;
+    }
 
-t = Environment.TickCount;
-Console.WriteLine("Solution using a loop: " + degreeAB);
-Console.WriteLine("Solution using a loop time: {0} ms", Environment.TickCount - t);
+    t = Environment.TickCount;
+    Console.WriteLine("Solution using a loop: " + degreeAB);
+    Console.WriteLine("Solution using a loop time: {0} ms", Environment.TickCount - t);
 }
 
 
