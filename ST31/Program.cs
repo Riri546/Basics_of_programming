@@ -3,33 +3,59 @@
 
 Console.Clear();
 
-// System.Random numberSintezator = new Random();
-int positivSum=0;
-int negativSum=0;
+int positivSum = 0;
+int negativSum = 0;
 int t;
 
-// void VariantNaiveArray()
-// {
-//     int i = 0;
-//     Console.Write("Solution: [");
-//     while (i < 12 - 1)
-//     {
-//         Console.Write(numberSintezator.Next(-9,9) + ",");
-//         i++;
-//     }
-//     Console.Write(numberSintezator.Next(-9,9));
-//     Console.WriteLine("]");
-   
-//     t = Environment.TickCount;
-//     Console.WriteLine("Solution time: {0} ms", Environment.TickCount - t);
-
-// }
-
-// VariantNaiveArray();
-
+//The method returns an array filled with random numbers from -9 to 9.
 int[] FillingArray()
 {
-    
+    int[] outArray = new int[12];
+    int i = 0;
+    System.Random numberSintezator = new Random();
+
+    while (i < 12)
+    {
+        outArray[i] = numberSintezator.Next(-9, 10);
+        i++;
+    }
+    return outArray;
 }
 
+//The method starts a loop to search for positive and negative array numbers.
+void ColculateTask(int[] outArray)
+{
+    int i = 0;
+    while (i < 12)
+    {
+        if (outArray[i] > 0)
+        {
+            positivSum++;
+        }
+        else
+        {
+            negativSum++;
+        }
 
+        i++;
+    }
+}
+
+//The method outputs the result of the solution to the console.
+void PrintResult()
+{
+    Console.WriteLine("Number of positive array elements: " + positivSum);
+    Console.WriteLine("Number of negative array elements: " + negativSum);
+}
+
+void VariantNaive()
+{
+    int[] bufferArray = FillingArray();
+    ColculateTask(bufferArray);
+    PrintResult();
+
+    // ColculateTask(FillingArray());
+    // PrintResult();
+}
+
+VariantNaive();
