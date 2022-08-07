@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that takes the number N as input and outputs the product of numbers from 1 to N.
+
+Console.Clear();
 
 Console.Write("Enter number: ");
 string inputLine = Console.ReadLine() ?? "";
