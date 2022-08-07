@@ -5,11 +5,9 @@ Console.Write("Enter a number: ");
 string? inputLine = Console.ReadLine();
 if(inputLine != null)
 {
-int[,] readPoint()
+int[,] ReadPoint()
 
 {
-
-    
     string coordXLine = inputLine.Substring(0, inputLine.IndexOf(";"));
     coordXLine = coordXLine.Substring(coordXLine.IndexOf("=") + 1);
 
@@ -30,7 +28,7 @@ int[,] readPoint()
 }
 
 //Prints the quarter number
-void ptintQuter(int[,] arreyPoint)
+void PtintQuter(int[,] arreyPoint)
 {
     if (arreyPoint[0, 0] > 0 && arreyPoint[0, 1] > 0)
     {
@@ -54,9 +52,9 @@ void ptintQuter(int[,] arreyPoint)
 
 }
 
-int[,] arreyPoint = readPoint();
+int[,] arreyPoint = ReadPoint();
 
-ptintQuter(arreyPoint);
+PtintQuter(arreyPoint);
 
 //ptintQuter (readPoint());
 

@@ -9,14 +9,14 @@ int D4;
 int D5;
 
 //
-void enterNumber()
+void EnterNumber()
 {
     Console.Write("Enter Number: ");
     string inputLineNumber = Console.ReadLine() ?? "";
     P = int.Parse(inputLineNumber);
 }
 //Decomposition of a number
-void decompositionOfaNumber()
+void DecompositionOfaNumber()
 {
     D1 = (P / 10000);
     D2 = (P / 1000) % 10;
@@ -26,8 +26,8 @@ void decompositionOfaNumber()
 }
 
 
-enterNumber();
-decompositionOfaNumber();
+EnterNumber();
+DecompositionOfaNumber();
 
 if (D1 == D5 && D2 == D4)
 {

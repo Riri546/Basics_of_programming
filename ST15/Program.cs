@@ -2,7 +2,7 @@
 
 //Problem solving method option 1
 
-void variant1(System.Random numberSintezator)
+void Variant1(System.Random numberSintezator)
 
 {
     int number = numberSintezator.Next();
@@ -28,4 +28,4 @@ void variant1(System.Random numberSintezator)
 
 System.Random numberSintezator = new Random();
 
-variant1(numberSintezator);
+Variant1(numberSintezator);

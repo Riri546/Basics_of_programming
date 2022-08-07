@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 
-void printAnswer(int number)
+void PrintAnswer(int number)
 {
     if (number == 1) Console.WriteLine("Acceptable: x>0, y>0");
     if (number == 2) Console.WriteLine("Acceptable: x<0, y>0");
@@ -14,5 +14,5 @@ if (inputLine != null)
 {
     int inputNumber = int.Parse(inputLine);
 
-    printAnswer(inputNumber);
+    PrintAnswer(inputNumber);
 }

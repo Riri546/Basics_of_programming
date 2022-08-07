@@ -13,7 +13,7 @@ if (inputLineN != null)
     int s = 1;
 
     // Cycle
-    void cycle()
+    void Cycle()
     {
         while (s <= numberN)
         {
@@ -23,7 +23,7 @@ if (inputLineN != null)
         }
     }
 
-    cycle();
+    Cycle();
 
     Console.WriteLine(lineN);
     Console.WriteLine(lineNN);

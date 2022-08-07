@@ -8,15 +8,15 @@ int inputNum = int.Parse(inputLine);
 int t;
 
 t = Environment.TickCount;
-Console.WriteLine(sumNums(inputNum));
+Console.WriteLine(SumNums(inputNum));
 Console.WriteLine("Simple solution time: {0} ms", Environment.TickCount - t);
 
 t = Environment.TickCount;
-Console.WriteLine(mulRec(inputNum));
+Console.WriteLine(MulRec(inputNum));
 Console.WriteLine("Recursive solution time: {0} ms", Environment.TickCount - t);
 
 
-int sumNums(int num)
+int SumNums(int num)
 {
     int sum = 1;
     for (int i = 1; i <= inputNum; i++)
@@ -27,7 +27,7 @@ int sumNums(int num)
     return sum;
 }
 
-int mulRec(int num)
+int MulRec(int num)
 {
     if (num == 1)
     {
@@ -35,7 +35,7 @@ int mulRec(int num)
     }
     else
     {
-        return num * mulRec(num - 1);
+        return num * MulRec(num - 1);
     }
 }
 

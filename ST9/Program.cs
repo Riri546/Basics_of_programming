@@ -2,7 +2,7 @@
 
 //Problem solving method option 1
 
-void variant1(System.Random numberSintezator)
+void Variant1(System.Random numberSintezator)
 {
     Console.WriteLine("Problem solving method option 1");
 
@@ -29,7 +29,7 @@ void variant1(System.Random numberSintezator)
 }
 
 //Problem solving method option 2
-void variant2(System.Random numberSintezator)
+void Variant2(System.Random numberSintezator)
 
 {
     Console.WriteLine("Problem solving method option 2");
@@ -53,7 +53,7 @@ void variant2(System.Random numberSintezator)
 }
 
 //Problem solving method option 3
-void variant3(System.Random numberSintezator)
+void Variant3(System.Random numberSintezator)
 
 {
     Console.WriteLine("Problem solving method option 3");
@@ -77,8 +77,8 @@ void variant3(System.Random numberSintezator)
 
 System.Random numberSintezator = new Random();
 
-variant1(numberSintezator);
+Variant1(numberSintezator);
 
-variant2(numberSintezator);
+Variant2(numberSintezator);
 
-variant3(numberSintezator);
+Variant3(numberSintezator);
