@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that outputs an array of 8 elements filled with zeros and ones in random order.
+
+Console.Clear();
 
 System.Random numberSintezator = new Random();
 
