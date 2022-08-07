@@ -12,7 +12,8 @@ int D5;
 void enterNumber()
 {
     Console.Write("Enter Number: ");
-    P = int.Parse(Console.ReadLine());
+    string inputLineNumber = Console.ReadLine() ?? "";
+    P = int.Parse(inputLineNumber);
 }
 //Decomposition of a number
 void decompositionOfaNumber()
