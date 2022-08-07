@@ -1,8 +1,11 @@
-﻿Console.Clear();
+﻿//Write a program that accepts a number (A) as input and outputs the sum of numbers from 1 to A.
+
+Console.Clear();
 
 Console.Write("Enter number: ");
+string inputLineNumber = Console.ReadLine() ?? "";
+int inputNum = int.Parse(inputLineNumber);
 
-int inputNum = int.Parse(Console.ReadLine());
 int t;
 
 //VariantSimpele
