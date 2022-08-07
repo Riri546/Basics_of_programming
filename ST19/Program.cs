@@ -12,21 +12,21 @@ double lengthAB;
 //Reads coordinates of points A and B
 void readDataOfPoint()
 {
-    Console.WriteLine("Enter the X coordinate of point A");
-    coordXPointA = int.Parse(Console.ReadLine());
+    Console.Write("Enter the X coordinate of point A: ");
+    string inputNum1 = Console.ReadLine() ?? "";
+    coordXPointA = int.Parse(inputNum1);
 
+    Console.Write("Enter the Y coordinate of point A: ");
+    string inputNum2 = Console.ReadLine() ?? "";
+    coordYPointA = int.Parse(inputNum2);
 
+    Console.Write("Enter the X coordinate of point B: ");
+    string inputNum4 = Console.ReadLine() ?? "";
+    coordXPointB = int.Parse(inputNum4);
 
-    Console.WriteLine("Enter the Y coordinate of point A");
-    coordYPointA = int.Parse(Console.ReadLine());
-
-    Console.WriteLine("Enter the X coordinate of point B");
-    coordXPointB = int.Parse(Console.ReadLine());
-
-    Console.WriteLine("Enter the Y coordinate of point B");
-    coordYPointB = int.Parse(Console.ReadLine());
-
-
+    Console.Write("Enter the Y coordinate of point B: ");
+    string inputNum5 = Console.ReadLine() ?? "";
+    coordYPointB = int.Parse(inputNum5);
 }
 
 
