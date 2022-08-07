@@ -7,6 +7,7 @@ Console.WriteLine("Enter two numbers and I will raise the first number to the po
 int number1;
 int number2;
 int t;
+int degreeAB;
 
 void Read()
 {
@@ -20,21 +21,23 @@ void Read()
 }
 
 
-//Solution using the method
-int VariantMethod(int degreeAB)
-{
-    degreeAB = (int)Math.Pow(number1,number2);
 
-    return degreeAB;
+// Solution using a loop
+void VariantCycle()
+{
+    degreeAB = 1;
+    for (int i = 0; i < number2; i++)
+{
+    degreeAB = degreeAB * number1;
 }
 
-void Time()
-{
-    t = Environment.TickCount;
-    Console.WriteLine(VariantMethod());
-    Console.WriteLine("Simple solution time: {0} ms", Environment.TickCount - t);
+t = Environment.TickCount;
+Console.WriteLine("Solution using a loop: " + degreeAB);
+Console.WriteLine("Solution using a loop time: {0} ms", Environment.TickCount - t);
 }
+
+
 
 
 Read();
-Time();
+VariantCycle();
