@@ -20,7 +20,15 @@ void Read()
     number2 = int.Parse(secondNumber);
 }
 
+//solution using the method
+void VariantMethod()
+{
+    degreeAB = (int) Math.Pow(number1,number2);
 
+    t = Environment.TickCount;
+    Console.WriteLine("Solution using the method: " + degreeAB);
+    Console.WriteLine("Solution using the method time: {0} ms", Environment.TickCount - t);
+}
 
 // Solution using a loop
 void VariantCycle()
@@ -37,7 +45,6 @@ Console.WriteLine("Solution using a loop time: {0} ms", Environment.TickCount - 
 }
 
 
-
-
 Read();
+VariantMethod();
 VariantCycle();
