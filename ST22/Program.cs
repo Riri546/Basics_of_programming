@@ -10,30 +10,35 @@ int coordZPointB;
 double lengthAB;
 
 
-//Считывает координаты точек A и B
+//Reads coordinates of points A and B
 void readDataOfPoint()
 {
-    Console.WriteLine("Введите координату X точки A");
-    coordXPointA = int.Parse(Console.ReadLine());
+    Console.Write("Enter the X coordinate of point A: ");
+    string inputNum1 = Console.ReadLine() ?? "";
+    coordXPointA = int.Parse(inputNum1);
 
-    Console.WriteLine("Введите координату Y точки A");
-    coordYPointA = int.Parse(Console.ReadLine());
+    Console.Write("Enter the Y coordinate of point A: ");
+    string inputNum2 = Console.ReadLine() ?? "";
+    coordYPointA = int.Parse(inputNum2);
 
-    Console.WriteLine("Введите координату Z точки A");
-    coordZPointA = int.Parse(Console.ReadLine());
+    Console.Write("Enter the Z coordinate of point A: ");
+    string inputNum3 = Console.ReadLine() ?? "";
+    coordZPointA = int.Parse(inputNum3);
 
-    Console.WriteLine("Введите координату X точки B");
-    coordXPointB = int.Parse(Console.ReadLine());
+    Console.Write("Enter the X coordinate of point B: ");
+    string inputNum4 = Console.ReadLine() ?? "";
+    coordXPointB = int.Parse(inputNum4);
 
-    Console.WriteLine("Введите координату Y точки B");
-    coordYPointB = int.Parse(Console.ReadLine());
+    Console.Write("Enter the Y coordinate of point B: ");
+    string inputNum5 = Console.ReadLine() ?? "";
+    coordYPointB = int.Parse(inputNum5);
 
-
-    Console.WriteLine("Введите координату Z точки B");
-    coordZPointB = int.Parse(Console.ReadLine());
+    Console.Write("Enter the Z coordinate of point B: ");
+    string inputNum6 = Console.ReadLine() ?? "";
+    coordZPointB = int.Parse(inputNum6);
 }
 
-//вычисляет растояние между точками A и B
+//calculates the distance between points A and B
 void conculateLateLengthAB()
 {
     lengthAB = Math.Sqrt(Math.Pow((coordXPointA - coordXPointB), 2) + Math.Pow((coordYPointA - coordYPointB), 2) + Math.Pow((coordZPointA - coordZPointB), 2));
