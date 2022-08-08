@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that accepts two numbers as input and outputs which number is larger and which is smaller.
+
+Console.Clear();
 
 Console.WriteLine("Enter two numbers and I'll tell you more");
 

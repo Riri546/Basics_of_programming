@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that accepts a three-digit number as input and shows the last digit of this number as output.
+
+Console.Clear();
 
 Console.Write("Enter a three-digit number:");
 

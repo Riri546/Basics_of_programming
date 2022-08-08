@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that accepts three numbers as input and outputs the maximum of these numbers.
+
+Console.Clear();
 
 Console.WriteLine("Enter two numbers and I'll tell you more");
 

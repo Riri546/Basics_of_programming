@@ -1,4 +1,7 @@
-﻿Console.Clear();
+﻿//Write a program that takes a number 
+//as input and outputs whether the number is even (whether it is divisible by two without remainder).
+
+Console.Clear();
 
 Console.Write("Enter a number and I'll tell you if it's even:");
 
