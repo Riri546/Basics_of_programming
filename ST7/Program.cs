@@ -34,6 +34,6 @@ void ConculateSimple()
         Console.WriteLine("Solution time: {0} ms", Environment.TickCount - t);
     }
 }
-        
+
 ReadNumber();
 ConculateSimple();
