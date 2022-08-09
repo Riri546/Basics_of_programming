@@ -3,21 +3,37 @@
 
 Console.Clear();
 
-Console.Write("Enter a number and I'll tell you if it's even:");
+int inputNumber;
+int outputNumber;
 
-string? inputLine = Console.ReadLine();
-if(inputLine != null)
+int t;
+
+//The method takes a number from the console
+void ReadNumber()
+{
+    Console.Write("Enter a number and I'll tell you if it's even: ");
+    string inputLine = Console.ReadLine() ?? "";
+    inputNumber = int.Parse(inputLine);
+}
+
+//Solving the problem
+void ConculateSimple()
+{
+    outputNumber = inputNumber % 2;
+
+    if (inputNumber % 2 == 0)
     {
-        int inputNumber = int.Parse(inputLine);
-
-        int outputNumber = inputNumber % 2;
-
-        if (inputNumber % 2 == 0)
-        {
-            Console.WriteLine("Even number");
-        }
-        else
-        {
-           Console.WriteLine("Odd number"); 
-        }
+        t = Environment.TickCount;
+        Console.WriteLine("Even number");
+        Console.WriteLine("Solution time: {0} ms", Environment.TickCount - t);
     }
+    else
+    {
+        t = Environment.TickCount;
+        Console.WriteLine("Odd number");
+        Console.WriteLine("Solution time: {0} ms", Environment.TickCount - t);
+    }
+}
+        
+ReadNumber();
+ConculateSimple();
