@@ -9,15 +9,15 @@ int t;
 //The method takes a number from the console
 void ReadNumber()
 {
-Console.WriteLine("Let's check if the first number is the square of the second one?))");
+    Console.WriteLine("Let's check if the first number is the square of the second one?))");
 
-Console.Write("Enter the first number: ");
-string inputLineOne = Console.ReadLine() ?? "";
-inputNumberOne = int.Parse(inputLineOne);
+    Console.Write("Enter the first number: ");
+    string inputLineOne = Console.ReadLine() ?? "";
+    inputNumberOne = int.Parse(inputLineOne);
 
-Console.Write("Enter the second number: ");
-string inputLineTwo = Console.ReadLine() ?? "";
-inputNumberTwo = int.Parse(inputLineTwo);
+    Console.Write("Enter the second number: ");
+    string inputLineTwo = Console.ReadLine() ?? "";
+    inputNumberTwo = int.Parse(inputLineTwo);
 }
 
 //The method solves in a simple way

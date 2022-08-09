@@ -2,31 +2,50 @@
 
 Console.Clear();
 
-Console.WriteLine("Enter two numbers and I'll tell you more");
+int A;
+int B;
+int t;
 
-Console.Write("Enter the first number: ");
-string? inputLineOne = Console.ReadLine();
-
-Console.Write("Enter the second number: ");
-string? inputLineTwo = Console.ReadLine();
-
-if (inputLineOne != null && inputLineTwo != null) 
+//The method takes a number from the console
+void ReadNumber()
 {
-    int A = int.Parse(inputLineOne);
-    int B = int.Parse(inputLineTwo);
+    Console.WriteLine("Enter two numbers and I'll tell you more");
 
-    if (A == B) 
-    {
-        Console.Write("The numbers are equal!");
-    } 
-    
-    else 
-        if (A > B)
-        {
-            Console.Write("The first number is larger!");
-        } 
-        else 
-        {
-            Console.Write("The second number is larger!");
-        }
+    Console.Write("Enter the first number: ");
+    string inputLineOne = Console.ReadLine() ?? "";
+    A = int.Parse(inputLineOne);
+
+
+    Console.Write("Enter the second number: ");
+    string inputLineTwo = Console.ReadLine() ?? "";
+    B = int.Parse(inputLineTwo);
 }
+
+//Solving the problem
+void ConculateSimple()
+{
+
+    if (A == B)
+    {
+        t = Environment.TickCount;
+        Console.WriteLine("The numbers are equal!");
+        Console.WriteLine("Solution time: {0} ms", Environment.TickCount - t);
+    }
+
+    else
+        if (A > B)
+    {
+        t = Environment.TickCount;
+        Console.WriteLine("The first number is larger!");
+        Console.WriteLine("Solution time: {0} ms", Environment.TickCount - t);
+    }
+    else
+    {
+        t = Environment.TickCount;
+        Console.WriteLine("The second number is larger!");
+        Console.WriteLine("Solution time: {0} ms", Environment.TickCount - t);
+    }
+}
+    
+ReadNumber();
+ConculateSimple();
