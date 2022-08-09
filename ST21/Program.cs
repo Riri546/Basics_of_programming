@@ -15,6 +15,7 @@ void EnterNumber()
     string inputLineNumber = Console.ReadLine() ?? "";
     P = int.Parse(inputLineNumber);
 }
+
 //Decomposition of a number
 void DecompositionOfaNumber()
 {

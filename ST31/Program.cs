@@ -44,10 +44,16 @@ void ColculateTask(int[] outArray)
 //The method outputs the result of the solution to the console.
 void PrintResult()
 {
+    t = Environment.TickCount;
     Console.WriteLine("Number of positive array elements: " + positivSum);
+    Console.WriteLine("Number of positive array time: {0} ms", Environment.TickCount - t);
+
+    t = Environment.TickCount;
     Console.WriteLine("Number of negative array elements: " + negativSum);
+    Console.WriteLine("Number of negative array time: {0} ms", Environment.TickCount - t);
 }
 
+//Solution method 31 naive
 void VariantNaive()
 {
     int[] bufferArray = FillingArray();
