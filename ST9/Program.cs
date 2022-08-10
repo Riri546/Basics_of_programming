@@ -1,79 +1,133 @@
-﻿Console.Clear();
+﻿//Write a program that outputs a random number from the segment [10, 100] and shows the largest digit of the number.
+
+Console.Clear();
 
 //Problem solving method option 1
 
 void Variant1(System.Random numberSintezator)
 {
-    Console.WriteLine("Problem solving method option 1");
+    int number;
+    int firstNumber;
+    int secondNumber;
 
-    int number = numberSintezator.Next(10,100);
-
-    Console.Write("This is a random number: ");
-    Console.WriteLine(number);
-
-    int firstNumber = number/10;
-
-    int secondNumber = number%10;
-
-    if (firstNumber>secondNumber)
+    //The method outputs a random number
+    void RandomNumber()
     {
-        Console.Write("The largest digit of the number: ");
-        Console.WriteLine(firstNumber);
-    }
-    else
-    {
-        Console.Write("The largest digit of the number: ");
-        Console.WriteLine (secondNumber); 
+        Console.WriteLine("Problem solving method option 1");
+
+        number = numberSintezator.Next(10, 100);
+
+        Console.Write("This is a random number: ");
+        Console.WriteLine(number);
     }
 
+    //Parsing the number
+    void ParsingNumber()
+    {
+        firstNumber = number / 10;
+
+        secondNumber = number % 10;
+    }
+
+    //The final solution through the condition if
+    void ConculateSimple()
+    {
+        if (firstNumber > secondNumber)
+        {
+            Console.Write("The largest digit of the number: ");
+            Console.WriteLine(firstNumber);
+        }
+        else
+        {
+            Console.Write("The largest digit of the number: ");
+            Console.WriteLine(secondNumber);
+        }
+    }
+
+    RandomNumber();
+    ParsingNumber();
+    ConculateSimple();
 }
 
 //Problem solving method option 2
 void Variant2(System.Random numberSintezator)
 
 {
-    Console.WriteLine("Problem solving method option 2");
+    int numberLili;
+    string stringNum;
 
-    int numberLili = new Random().Next(10,100);
-
-    Console.Write("This is a random number: ");
-    Console.WriteLine(numberLili);
-
-    string stringNum = numberLili.ToString();
-
-    Console.Write("The biggest digit is: ");
-    if (stringNum[0] > stringNum[1])
+    //The method outputs a random number
+    void RandomNumber()
     {
-        Console.WriteLine(stringNum[0]);
+        Console.WriteLine("Problem solving method option 2");
+
+        numberLili = new Random().Next(10, 100);
+
+        Console.Write("This is a random number: ");
+        Console.WriteLine(numberLili);
     }
-    else 
+
+    //Solution via toString
+    void SolutionToString()
     {
-     Console.WriteLine(stringNum[1]);   
+        stringNum = numberLili.ToString();
+
+        Console.Write("The biggest digit is: ");
     }
+
+    //The final solution through the condition if
+    void ConculateSimple()
+    {
+        if (stringNum[0] > stringNum[1])
+        {
+            Console.WriteLine(stringNum[0]);
+        }
+        else
+        {
+            Console.WriteLine(stringNum[1]);
+        }
+    }
+
+    RandomNumber();
+    SolutionToString();
+    ConculateSimple();
 }
+
 
 //Problem solving method option 3
 void Variant3(System.Random numberSintezator)
-
 {
-    Console.WriteLine("Problem solving method option 3");
+    char[] digits;
+    int firstNumber;
+    int secondNumber;
+    int resultNumber;
 
-    char[] digits = numberSintezator.Next(10,100).ToString().ToArray();
+    //The method outputs a random number
+    void RandomNumber()
+    {
+        Console.WriteLine("Problem solving method option 3");
 
-    Console.Write("This is a random number: ");
-    Console.WriteLine(digits);
+        digits = numberSintezator.Next(10, 100).ToString().ToArray();
 
-    int firstNumber = ((int)digits[0])-48;
-    int secondNumber = ((int)digits[1])-48;
+        Console.Write("This is a random number: ");
+        Console.WriteLine(digits);
+    }
 
-    int resultNumber = firstNumber>secondNumber?resultNumber=firstNumber:resultNumber=secondNumber;
+    //The final solution 
+    void ConculateSimple()
+    {
+        firstNumber = ((int)digits[0]) - 48;
+        secondNumber = ((int)digits[1]) - 48;
 
-    Console.Write("The biggest digit is: ");
-    Console.WriteLine(resultNumber);
+        resultNumber = firstNumber > secondNumber ? resultNumber = firstNumber : resultNumber = secondNumber;
+
+        Console.Write("The biggest digit is: ");
+        Console.WriteLine(resultNumber);
+    }
+
+    RandomNumber();
+    ConculateSimple();
 }
-
-
-
 
 System.Random numberSintezator = new Random();
 
