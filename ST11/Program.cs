@@ -1,19 +1,27 @@
 ﻿Console.Clear();
 
-Console.WriteLine("Is the second number a multiple of the first?");
+int first;
+int second;
+int result;
 
-Console.Write("Enter the first number: ");
-string? firstNumber = Console.ReadLine();
-
-Console.Write("Enter the second number: ");
-string? secondNumber = Console.ReadLine();
-
-if (firstNumber!= null && secondNumber != null)
+//The method takes a number from the console
+void ReadNumber()
 {
-    int first = int.Parse(firstNumber);
-    int second = int.Parse(secondNumber);
+    Console.WriteLine("Is the second number a multiple of the first?");
 
-    int result = second%first;
+    Console.Write("Enter the first number: ");
+    string firstNumber = Console.ReadLine() ?? "";
+    first = int.Parse(firstNumber);
+
+    Console.Write("Enter the second number: ");
+    string secondNumber = Console.ReadLine() ?? "";
+    second = int.Parse(secondNumber);
+}
+
+//Solving the problem
+void ConculateSimple()
+{
+    result = first % second ;
 
     if (result == 0)
     {
@@ -25,4 +33,5 @@ if (firstNumber!= null && secondNumber != null)
     }
 }
 
-
+ReadNumber();
+ConculateSimple();
