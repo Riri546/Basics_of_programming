@@ -1,4 +1,8 @@
-﻿Console.Clear();
+﻿//Write a program that will take two numbers as input and output whether the second number is a multiple
+//of the first. If the second number is not a multiple of the first, then the program outputs the remainder
+//of the branch.
+
+Console.Clear();
 
 int first;
 int second;
