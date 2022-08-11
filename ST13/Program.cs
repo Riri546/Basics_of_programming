@@ -21,7 +21,7 @@ void ReadNumber()
     inputNumTwo = int.Parse(inputLineTwo);
 }
 
-//The method solves in a simple way
+////Solving the problem
 void ConculateSimple()
 {
     a = inputNumOne * inputNumOne;
