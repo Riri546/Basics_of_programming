@@ -2,12 +2,19 @@
 
 Console.Clear();
 
-Console.Write("Write a number that corresponds to the ordinal number of the day of the week, and I'll tell you if it's a day off: ");
-string? numberLine = Console.ReadLine();
-if (numberLine != null)
-{
-    int number = int.Parse(numberLine);
+int number;
 
+//The method takes a number from the console
+void ReadNumber()
+{
+Console.Write("Write a number that corresponds to the ordinal number of the day of the week, and I'll tell you if it's a day off: ");
+string numberLine = Console.ReadLine() ?? "";
+number = int.Parse(numberLine);
+}
+    
+////Solving the problem
+void ConculateNaive()
+{
     if (number < 1)
     {
         Console.WriteLine("Error: the number is too small");
@@ -33,5 +40,7 @@ if (numberLine != null)
                 break;
         }
     }
-
 }
+
+ReadNumber();
+ConculateNaive();
