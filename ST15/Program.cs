@@ -1,20 +1,36 @@
-﻿Console.Clear();
+﻿//Write a program that outputs the third digit of a given number or reports that there is no third digit.
+
+Console.Clear();
 
 //Problem solving method option 1
-
 void Variant1(System.Random numberSintezator)
 
 {
-    int number = numberSintezator.Next();
+    int number;
+    int length;
+    string str;
+
+    //The method outputs a random number
+    void RandomNumber()
+    {
+        number = numberSintezator.Next();
 
         Console.Write("This is a random number: ");
         Console.WriteLine(number);
+    }
 
-        int length = number.ToString().Length;
+    //The method calculates the length of a number
+    void NumberLength()
+    {
+        length = number.ToString().Length;
 
-        string str = number.ToString();
+        str = number.ToString();
+    }
 
-        if (length > 3)
+    //The final solution through the condition if
+    void FinalSolution()
+    {
+        if (length >= 3)
         {
             Console.Write("The third digit of a random number: ");
             Console.WriteLine(str[2]);
@@ -22,8 +38,13 @@ void Variant1(System.Random numberSintezator)
 
         else
         {
-             Console.Write("Error: not enough numbers: ");
+            Console.Write("Error: not enough numbers");
         }
+    }
+
+    RandomNumber();
+    NumberLength();
+    FinalSolution();
 }
 
 System.Random numberSintezator = new Random();
