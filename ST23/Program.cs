@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that takes a number (N) as input and outputs a table of cubes of numbers from 1 to N.1
+
+Console.Clear();
 
 Console.Write("Enter number: ");
 
