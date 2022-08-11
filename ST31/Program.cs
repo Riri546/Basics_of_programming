@@ -5,6 +5,8 @@ Console.Clear();
 
 int positivSum = 0;
 int negativSum = 0;
+int i;
+int buf;
 int t;
 
 //The method returns an array filled with random numbers from -9 to 9.
@@ -46,17 +48,30 @@ void PrintResult()
 {
     t = Environment.TickCount;
     Console.WriteLine("Number of positive array elements: " + positivSum);
-    Console.WriteLine("Number of positive array time: {0} ms", Environment.TickCount - t);
+    Console.WriteLine("Variant naive time: {0} ms", Environment.TickCount - t);
 
     t = Environment.TickCount;
     Console.WriteLine("Number of negative array elements: " + negativSum);
-    Console.WriteLine("Number of negative array time: {0} ms", Environment.TickCount - t);
+    Console.WriteLine("Variant naive time: {0} ms", Environment.TickCount - t);
+}
+
+void PrintIntArray(int[] inputArray)
+{
+    i = 0;
+
+    while (i < inputArray.Length - 1)
+    {
+        Console.Write(inputArray[i] + ", ");
+        i++;
+    }
+    Console.WriteLine(inputArray[i]);
 }
 
 //Solution method 31 naive
 void VariantNaive()
 {
     int[] bufferArray = FillingArray();
+    PrintIntArray(bufferArray);
     ColculateTask(bufferArray);
     PrintResult();
 
@@ -64,4 +79,38 @@ void VariantNaive()
     // PrintResult();
 }
 
+//The method completely solves the entire array and gives an answer
+void VariantSimple()
+{
+    System.Random numberSintezator = new Random();
+    i = 0;
+    buf = 0;
+
+    while (i < 12)
+    {
+        buf = numberSintezator.Next(-9, 9);
+        Console.Write(buf + ", ");
+
+        if (buf >= 0)
+        {
+            positivSum += buf;
+        }
+        else
+        {
+            negativSum += buf;
+        }
+        i++;
+    }
+    Console.WriteLine();
+
+    t = Environment.TickCount;
+    Console.WriteLine("Number of positive array elements: " + positivSum);
+    Console.WriteLine("Variant simple time: {0} ms", Environment.TickCount - t);
+
+    t = Environment.TickCount;
+    Console.WriteLine("Number of negative array elements: " + negativSum);
+    Console.WriteLine("Variant simple time: {0} ms", Environment.TickCount - t);
+}
+
 VariantNaive();
+VariantSimple();
