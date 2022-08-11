@@ -1,15 +1,25 @@
-﻿Console.Clear();
+﻿//Write a program that takes a number as input and checks whether it is a multiple of 7 and 23 at the same time.
 
-Console.WriteLine("Is your number a multiple of 7 and 23?");
+Console.Clear();
 
-Console.Write("Enter number: ");
-string? firstNumber = Console.ReadLine();
+int number;
+int resultNumber1;
+int resultNumber2;
 
-if (firstNumber!= null)
+//The method takes a number from the console
+void ReadNumber()
 {
-    int number= int.Parse(firstNumber);
+    Console.WriteLine("Is your number a multiple of 7 and 23?");
 
-    int resultNumber1 = number%7;
+    Console.Write("Enter number: ");
+    string firstNumber = Console.ReadLine() ?? "";
+    number = int.Parse(firstNumber);
+}
+
+//The method checks whether the entered number is a multiple of 7
+void MultipleOf7()
+{
+    resultNumber1 = number % 7;
 
     if (resultNumber1 == 0)
     {
@@ -19,8 +29,12 @@ if (firstNumber!= null)
     {
         Console.WriteLine("No , this number is not a multiple of 7: " + resultNumber1);
     }
+}
 
-    int resultNumber2 = number%23;
+////The method checks whether the entered number is a multiple of 23
+void MultipleOf23()
+{
+    resultNumber2 = number % 23;
 
     if (resultNumber2 == 0)
     {
@@ -32,4 +46,6 @@ if (firstNumber!= null)
     }
 }
 
-
+ReadNumber();
+MultipleOf7();
+MultipleOf23();
