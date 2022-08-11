@@ -3,11 +3,10 @@
 
 Console.Clear();
 
-//The method reads the points and returns an array with it
 Console.Write("Enter a number: ");
-string? inputLine = Console.ReadLine();
-if(inputLine != null)
-{
+string inputLine = Console.ReadLine() ?? "";
+
+//The method reads the points and returns an array with it 
 int[,] ReadPoint()
 
 {
@@ -61,4 +60,3 @@ PtintQuter(arreyPoint);
 
 //ptintQuter (readPoint());
 
-}
