@@ -4,7 +4,6 @@
 Console.Clear();
 
 int i;
-int t;
 
 //The method returns an array filled with random numbers 
 int[] FillingArray()
@@ -48,7 +47,7 @@ int[] ColculateTask(int[] inputArray)
     return resultArray;
 }
 
-t = Environment.TickCount;
+int t = Environment.TickCount;
 int[] bufferArray = FillingArray();
 PrintIntArray(bufferArray);
 int[] resultArray = ColculateTask(bufferArray);
