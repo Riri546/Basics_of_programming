@@ -1,2 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//Specify a one-dimensional array filled with random numbers. Find the sum of the elements standing in odd positions.
