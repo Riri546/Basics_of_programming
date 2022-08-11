@@ -4,6 +4,7 @@
 Console.Clear();
 
 int i;
+int t;
 
 //The method returns an array filled with random numbers from -9 to 9.
 int[] FillingArray()
@@ -46,8 +47,26 @@ int[] ColculateTask(int[] inputArray)
     return outputArray;
 }
 
+//A method that works through a tilde
+int[] InvertArrayTilda(int[] inputArray)
+{
+    int i = 0;
+    while (i < inputArray.Length)
+    {
+        inputArray[i] = (~inputArray[i]) + 1;
+        i++;
+    }
+    return inputArray;
+}
 
+t = Environment.TickCount;
 int[] bufferArray = FillingArray();
 PrintIntArray(bufferArray);
 int[] resultArray = ColculateTask(bufferArray);
 PrintIntArray(resultArray);
+Console.WriteLine("Variant simple time: {0} ms", Environment.TickCount - t);
+
+t = Environment.TickCount;
+resultArray = InvertArrayTilda(bufferArray);
+PrintIntArray(resultArray);
+Console.WriteLine("Variant tilda time: {0} ms", Environment.TickCount - t);
