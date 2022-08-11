@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿//Write a program that accepts a digit indicating the day of the week as input and checks whether this day is a weekend.
+
+Console.Clear();
 
 Console.Write("Write a number that corresponds to the ordinal number of the day of the week, and I'll tell you if it's a day off: ");
 string? numberLine = Console.ReadLine();
