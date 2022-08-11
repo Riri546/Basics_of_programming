@@ -1,22 +1,33 @@
-﻿Console.Clear();
+﻿//Write a program that takes two numbers as input and checks whether one number is the square of the other.
 
-Console.WriteLine("Is one number the square of the second");
+Console.Clear();
 
-Console.Write("Enter the first number: ");
-string? inputLineOne = Console.ReadLine();
+int inputNumOne;
+int inputNumTwo;
+int a;
+int b;
 
-Console.Write("Enter the second number: ");
-string? inputLineTwo = Console.ReadLine();
-
-if ((inputLineOne != null) && (inputLineTwo != null))
+//The method takes a number from the console
+void ReadNumber()
 {
-    int inputNumOne = int.Parse(inputLineOne);
-    int inputNumTwo = int.Parse(inputLineTwo);
+    Console.WriteLine("Is one number the square of the second");
 
-    int a = inputNumOne * inputNumOne;
-    int b = inputNumTwo * inputNumTwo;
+    Console.Write("Enter the first number: ");
+    string inputLineOne = Console.ReadLine() ?? "";
+    inputNumOne = int.Parse(inputLineOne);
 
-    if((a == inputNumTwo) || (b == inputNumOne))
+    Console.Write("Enter the second number: ");
+    string inputLineTwo = Console.ReadLine() ?? "";
+    inputNumTwo = int.Parse(inputLineTwo);
+}
+
+//The method solves in a simple way
+void ConculateSimple()
+{
+    a = inputNumOne * inputNumOne;
+    b = inputNumTwo * inputNumTwo;
+
+    if ((a == inputNumTwo) || (b == inputNumOne))
     {
         Console.WriteLine("Yes!");
     }
@@ -25,3 +36,6 @@ if ((inputLineOne != null) && (inputLineTwo != null))
         Console.WriteLine("No!");
     }
 }
+
+ReadNumber();
+ConculateSimple();
