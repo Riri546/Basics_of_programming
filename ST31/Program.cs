@@ -55,7 +55,6 @@ void PrintResult()
     Console.WriteLine("Variant naive time: {0} ms", Environment.TickCount - t);
 }
 
-//The method outputs a random array of numbers to the console
 void PrintIntArray(int[] inputArray)
 {
     i = 0;
