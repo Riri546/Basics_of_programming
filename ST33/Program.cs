@@ -2,6 +2,9 @@
 
 Console.Clear();
 
+int i;
+int t;
+
 //The method returns an array filled with random numbers from -9 to 9.
 int[] FillingArray()
 {
@@ -17,19 +20,6 @@ int[] FillingArray()
     return outArray;
 }
 
-//The method deals with replacing positive numbers with negative ones and vice versa
-int[] ColculateTask(int[] inputArray)
-{
-    int[] outputArray = new int[12];
-    int i = 0;
-    while (i < 12)
-    {
-        outputArray[i] = inputArray[i] * (-1);
-        i++;
-    }
-    return outputArray;
-}
-
 //The method outputs a random array of numbers to the console
 void PrintIntArray(int[] inputArray)
 {
@@ -42,3 +32,32 @@ void PrintIntArray(int[] inputArray)
     }
     Console.WriteLine(inputArray[i]);
 }
+
+//The method of solving the problem 33
+bool ColculateTask(int[] inputArray, int searchNumber)
+{
+    bool resultSearch = false;
+    int i = 0;
+    while (i < 12)
+    {
+        if (inputArray[i] == searchNumber)
+        {
+            resultSearch = true;
+            break;
+        }
+        i++;
+    }
+    return resultSearch;
+}
+
+t = Environment.TickCount;
+int[] bufferArray = FillingArray();
+PrintIntArray(bufferArray);
+Console.WriteLine("Variant simple time: {0} ms", Environment.TickCount - t);
+
+
+Console.Write("Plese, enter number: ");
+string number = Console.ReadLine() ?? "";
+int serchNumber = int.Parse(number);
+
+Console.WriteLine(ColculateTask(bufferArray, serchNumber));
