@@ -48,7 +48,6 @@ int t = Environment.TickCount;
 int[] bufferArray = FillingArray();
 PrintIntArray(bufferArray);
 
-
 Console.WriteLine();
 Console.WriteLine(ColculateTask(bufferArray));
 Console.WriteLine();
