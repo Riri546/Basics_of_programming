@@ -74,7 +74,6 @@ int[] reversedArray = ReversNewArray(testArray);
 PrintIntArray(reversedArray);
 
 PrintIntArray(ReversSwapArray(testArray));
-PrintIntArray(testArray);
 
 Console.WriteLine();
 Console.WriteLine("Time to solve the whole problem: {0} ms", Environment.TickCount - t);
