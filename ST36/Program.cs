@@ -75,7 +75,7 @@ int ColculateTask(int[] inputArray)
 
             Console.Write(inputArray[i] + " ");
         }
-        i++;
+        i+=2;
     }
     return resultNumber;
 }
