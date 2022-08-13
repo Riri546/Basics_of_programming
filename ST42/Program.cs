@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//Without using recursion, output the first N Fibonacci numbers. The first two Fibonacci numbers are 0 and 1.
+

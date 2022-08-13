@@ -4,9 +4,9 @@ Console.Clear();
 
 Console.Write("Enter a number in binary calculus: ");
 
-int t = Environment.TickCount;
+DateTime d1 = DateTime.Now;
 Console.WriteLine("A number in binary calculus: " + Convert.ToString(int.Parse(Console.ReadLine() ?? ""), 2));
-Console.WriteLine("Time to solve the problem: {0} ms", Environment.TickCount - t);
+Console.WriteLine(DateTime.Now-d1);
 
 
         
