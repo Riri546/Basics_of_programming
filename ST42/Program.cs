@@ -10,6 +10,7 @@ int ReadDecemaNumber()
 {
     return int.Parse(Console.ReadLine() ?? "");
 }
+
 string Fibonacci(int n)
 {
     string answer = "";
