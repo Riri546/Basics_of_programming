@@ -6,11 +6,13 @@ Console.Write("Enter the number of numbers in the Fibonacci series: ");
 int decemalNumber = ReadDecemaNumber();
 PrintAnswer(Fibonacci(decemalNumber));
 
+//The method enters a number
 int ReadDecemaNumber()
 {
     return int.Parse(Console.ReadLine() ?? "");
 }
 
+//The method produces a Fibonacci solution
 string Fibonacci(int n)
 {
     string answer = "";
@@ -40,7 +42,12 @@ string Fibonacci(int n)
     return answer;
 }
 
+//The method outputs the result
 void PrintAnswer(string answer)
 {
+    DateTime d1 = DateTime.Now;
     Console.Write("Fibonacci series for a given number of numbers: " + answer);
+    Console.WriteLine();
+    Console.WriteLine("Solution time: ");
+    Console.WriteLine(DateTime.Now - d1);
 }
