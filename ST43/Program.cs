@@ -33,6 +33,7 @@ void PrintIntArray(int[] inputArray)
     Console.WriteLine(inputArray[i]);
 }
 
+//The method copies the array
 int[] CopyArayStandartTool(params int[] inputarray)
 {
     int[] buferArray = new int[inputarray.Length];
@@ -40,8 +41,13 @@ int[] CopyArayStandartTool(params int[] inputarray)
     return buferArray;
 }
 
+DateTime d1 = DateTime.Now;
 int[] tastArray = FillingArray();
 PrintIntArray(tastArray);
 
 int[] resultArray = CopyArayStandartTool(tastArray);
 PrintIntArray(resultArray);
+
+Console.WriteLine("Solution time: ");
+Console.WriteLine(DateTime.Now - d1);
+
