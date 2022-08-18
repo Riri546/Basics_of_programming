@@ -13,7 +13,6 @@ int[,] FillTowDimArray(int countRow, int countColumn)
         for (int j = 0; j < countColumn; j++)
         {
             outArray[i, j] = numberSyntezator.Next(0, 101);
-
         }
     }
     return outArray;

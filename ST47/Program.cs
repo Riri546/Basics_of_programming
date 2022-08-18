@@ -21,35 +21,54 @@ int[,] FillTowDimArray(int countRow, int countColumn)
 }
 
 //Method for printing a two-dimensional array
-void PrintTwoDimArray(int[,] inpujitArray)
+void PrintTwoDimArray(int[,] inputArray)
 {
-    for (int i = 0; i < inpujitArray.GetLength(0); i++)
+    for (int i = 0; i < inputArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inpujitArray.GetLength(1); j++)
+        for (int j = 0; j < inputArray.GetLength(1); j++)
         {
-            Console.Write(inpujitArray[i, j] + " ");
+            Console.Write(inputArray[i, j] + " ");
         }
         Console.Write("\n");
     }
 }
 
 //The method prints an array in yellow
-void PrintColorTwoDimArray(int[,] inpujitArray)
+void PrintColorTwoDimArray(int[,] inputArray)
 {
     Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.Yellow;
 
-    for (int i = 0; i < inpujitArray.GetLength(0); i++)
+    for (int i = 0; i < inputArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inpujitArray.GetLength(1); j++)
+        for (int j = 0; j < inputArray.GetLength(1); j++)
         {
-            Console.Write(inpujitArray[i, j] + " ");
+            Console.Write(inputArray[i, j] + " ");
         }
         Console.Write("\n");
     }
     Console.ResetColor();
 }
 
+int[,] UpdateTwoDimArray(int[,] inputArray)
+{
+    Console.WriteLine();
+
+    int[,] outArray = new int[inputArray.GetLength(0), inputArray.GetLength(1)];
+    for (int i = 0; i < inputArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inputArray.GetLength(1); j++)
+        {
+            if (i % 2 == 0 && j % 2 == 0)
+            {
+                outArray[i, j] = inputArray[i, j] * inputArray[i, j];
+            }
+        }
+        Console.Write("\n");
+    }
+    return outArray;
+}
+
 int[,] twoDimArray = FillTowDimArray(5, 8);
 PrintTwoDimArray(twoDimArray);
-PrintColorTwoDimArray(twoDimArray);
+PrintColorTwoDimArray(UpdateTwoDimArray(twoDimArray));
