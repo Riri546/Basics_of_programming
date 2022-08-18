@@ -1,5 +1,7 @@
 ﻿//Specify a two-dimensional array of size m×n filled with random integers.
 
+Console.Clear();
+
 //Method for filling a two-dimensional array
 int[,] FillTowDimArray(int countRow, int countColumn)
 {
