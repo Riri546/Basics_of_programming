@@ -14,7 +14,6 @@ int[,] FillTowDimArray(int countRow, int countColumn)
         for (int j = 0; j < countColumn; j++)
         {
             outArray[i, j] = numberSyntezator.Next(0, 101);
-
         }
     }
     return outArray;
@@ -36,7 +35,6 @@ void PrintTwoDimArray(int[,] inputArray)
 //The method prints an array in yellow
 void PrintColorTwoDimArray(int[,] inputArray)
 {
-    Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.Yellow;
 
     for (int i = 0; i < inputArray.GetLength(0); i++)
@@ -50,7 +48,8 @@ void PrintColorTwoDimArray(int[,] inputArray)
     Console.ResetColor();
 }
 
-int[,] UpdateTwoDimArray(int[,] inputArray)
+//The method solves the problem 48
+void UpdateTwoDimArray(ref int[,] inputArray)
 {
     Console.WriteLine();
 
@@ -59,16 +58,17 @@ int[,] UpdateTwoDimArray(int[,] inputArray)
     {
         for (int j = 0; j < inputArray.GetLength(1); j++)
         {
-            if (i % 2 == 0 && j % 2 == 0)
-            {
-                outArray[i, j] = inputArray[i, j] * inputArray[i, j];
-            }
+            inputArray[i,j] = i+j;
         }
-        Console.Write("\n");
     }
-    return outArray;
 }
+
+DateTime d1 = DateTime.Now;
 
 int[,] twoDimArray = FillTowDimArray(5, 8);
 PrintTwoDimArray(twoDimArray);
-PrintColorTwoDimArray(UpdateTwoDimArray(twoDimArray));
+UpdateTwoDimArray(ref twoDimArray);
+PrintColorTwoDimArray(twoDimArray);
+
+Console.WriteLine("Solution time: ");
+Console.WriteLine(DateTime.Now - d1);
