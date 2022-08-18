@@ -48,7 +48,7 @@ void PrintColorTwoDimArray(int[,] inputArray)
     Console.ResetColor();
 }
 
-//The method solves the problem 48
+//The method solves the problem 47
 void UpdateTwoDimArray(ref int[,] inputArray)
 {
     Console.WriteLine();
