@@ -19,19 +19,6 @@ int[,] FillTowDimArray(int countRow, int countColumn)
     return outArray;
 }
 
-//Method for printing a two-dimensional array
-void PrintTwoDimArray(int[,] inputArray)
-{
-    for (int i = 0; i < inputArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < inputArray.GetLength(1); j++)
-        {
-            Console.Write(inputArray[i, j] + "\t");
-        }
-        Console.Write("\n");
-    }
-}
-
 //The method prints an array in yellow
 void PrintColorTwoDimArray(int[,] inputArray)
 {
@@ -48,8 +35,8 @@ void PrintColorTwoDimArray(int[,] inputArray)
     Console.ResetColor();
 }
 
-//The method solves the problem 48
-int ColcDigTwoDimArr(int[,] inputArray)
+//The method solves the problem 49
+int CalcDigTwoDimArr(int[,] inputArray)
 {
     Console.WriteLine();
 
@@ -65,8 +52,10 @@ int ColcDigTwoDimArr(int[,] inputArray)
 DateTime d1 = DateTime.Now;
 
 int[,] twoDimArray = FillTowDimArray(5, 8);
-PrintTwoDimArray(twoDimArray);
-PrintColorTwoDimArray(UpdateTwoDimArray(twoDimArray));
+PrintColorTwoDimArray(twoDimArray);
+
+int sum = CalcDigTwoDimArr(twoDimArray);
+Console.WriteLine("Diagonal: " + sum);
 
 Console.WriteLine("Solution time: ");
 Console.WriteLine(DateTime.Now - d1);
