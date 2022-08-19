@@ -51,7 +51,7 @@ ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black, ConsoleColor.Blue, C
             Console.Write("{0,6:F2}", outArray[i, j]);
             Console.ResetColor();
         }
-        Console.WriteLine();
+        Console.WriteLine("\t");
     }
 }
 
