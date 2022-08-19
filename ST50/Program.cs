@@ -44,5 +44,6 @@ void PrintColorTwoDimArray(double[,] outArray)
 DateTime d1 = DateTime.Now;
 double[,] twoDimArray = FillTowDimArray(5, 8);
 PrintColorTwoDimArray(twoDimArray);
+Console.WriteLine("Solution time: ");
 Console.WriteLine(DateTime.Now - d1);
 
