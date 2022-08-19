@@ -41,7 +41,8 @@ ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black, ConsoleColor.Blue, C
     }
 }
 
+DateTime d1 = DateTime.Now;
 double[,] twoDimArray = FillTowDimArray(5, 8);
 PrintColorTwoDimArray(twoDimArray);
-
+Console.WriteLine(DateTime.Now - d1);
 
