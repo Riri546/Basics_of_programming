@@ -11,7 +11,7 @@ double[,] FillTowDimArray(int countRow, int countColumn)
     {
         for (int j = 0; j < countColumn; j++)
         {
-            outArray[i, j] = numberSyntezator.NextDouble() * 100; 
+            outArray[i, j] = numberSyntezator.NextDouble() * 100;
 
         }
     }
@@ -23,7 +23,7 @@ ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black, ConsoleColor.Blue, C
                                         ConsoleColor.DarkBlue, ConsoleColor.DarkCyan, ConsoleColor.DarkGray,
                                         ConsoleColor.DarkGreen, ConsoleColor.DarkMagenta, ConsoleColor.DarkRed,
                                         ConsoleColor.DarkYellow, ConsoleColor.Gray, ConsoleColor.Green,
-                                        ConsoleColor.Magenta, ConsoleColor.Red, ConsoleColor.White, 
+                                        ConsoleColor.Magenta, ConsoleColor.Red, ConsoleColor.White,
                                         ConsoleColor.Yellow};
 
 //A method that prints the solution in a multi-colored format
@@ -33,7 +33,7 @@ void PrintColorTwoDimArray(double[,] outArray)
     {
         for (int j = 0; j < outArray.GetLength(1); j++)
         {
-            Console.ForegroundColor = col[new System.Random().Next(0,16)];
+            Console.ForegroundColor = col[new System.Random().Next(0, 16)];
             Console.Write("{0,6:F2}", outArray[i, j]);
             Console.ResetColor();
         }

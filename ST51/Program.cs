@@ -3,17 +3,20 @@
 
 Console.Clear();
 
+//Random Number 
+
 //Method for filling a two-dimensional array
 int[,] FillTowDimArray(int countRow, int countColumn)
 {
     System.Random numberSyntezator = new System.Random();
 
     int[,] outArray = new int[countRow, countColumn];
+    int randomNumber = numberSyntezator.Next(0, 101);
     for (int i = 0; i < countRow; i++)
     {
         for (int j = 0; j < countColumn; j++)
         {
-            outArray[i, j] = numberSyntezator.Next(0, 101);
+           outArray[i,j]= 
         }
     }
     return outArray;
