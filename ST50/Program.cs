@@ -1,20 +1,7 @@
 ﻿// // Specify a two-dimensional array of size m×n filled with random real numbers.
 
-// Console.Clear();
+Console.Clear();
 
-// double[,] a = new double[5, 10];
-// Random random = new Random();
-// for (int i = 0; i < 5; i++)
-// {
-//     for (int j = 0; j < 10; j++)
-//     {
-//         a[i, j] = random.NextDouble() * 100; // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
-//         Console.Write("{0,6:F2}", a[i, j]);
-//     }
-//     Console.WriteLine();
-// }
-
-//Method for filling a two-dimensional array
 double[,] FillTowDimArray(int countRow, int countColumn)
 {
     System.Random numberSyntezator = new System.Random();
@@ -24,10 +11,9 @@ double[,] FillTowDimArray(int countRow, int countColumn)
     {
         for (int j = 0; j < countColumn; j++)
         {
-            outArray[i, j] = numberSyntezator.NextDouble() * 100; // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
-            // Console.Write("{0,6:F2}", outArray[i, j]);
+            outArray[i, j] = numberSyntezator.NextDouble() * 100; 
+
         }
-        // Console.WriteLine();
     }
     return outArray;
 }
