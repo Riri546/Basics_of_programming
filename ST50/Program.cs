@@ -27,7 +27,7 @@ ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black, ConsoleColor.Blue, C
                                         ConsoleColor.Yellow};
 
 //A method that prints the solution in a multi-colored format
- void PrintColorTwoDimArray(double[,] outArray)
+void PrintColorTwoDimArray(double[,] outArray)
 {
     for (int i = 0; i < outArray.GetLength(0); i++)
     {
