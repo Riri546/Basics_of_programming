@@ -48,6 +48,6 @@ void PrintColorTwoDimArray(int[,] inpujitArray)
     Console.ResetColor();
 }
 
-int[,] twoDimArray = FillTowDimArray(5, 8);
+int[,] twoDimArray = FillTowDimArray(3, 4);
 PrintTwoDimArray(twoDimArray);
 PrintColorTwoDimArray(twoDimArray);
