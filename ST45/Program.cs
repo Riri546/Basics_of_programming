@@ -93,10 +93,10 @@ void ConculateTask()
         Console.WriteLine("Intersection points: x1 = " + x1 + "; y1 = " + y1 +
                                                 "; x2 = " + x2 + "; y2 = " + y2 +
                                                 "; x3 = " + x3 + "; y3 = " + y3);
-        Console.WriteLine("The length of the straight A: " + a + "; B: " + b + "; C:" + c);
+        Console.WriteLine("The length of the straight A: " + a + "; B: " + b + "; C: " + c);
         Console.WriteLine("The area of the triangle: " + s);
 
-        Console.WriteLine("Solution time: ");
+        Console.Write("Solution time: ");
         Console.WriteLine(DateTime.Now - d1);
     }
 
