@@ -32,21 +32,21 @@ void PrintTwoDimArray(int[,] inpujitArray)
     }
 }
 
+//The method solves the problem 52
 void ConculeteTask(int[,] inpujitArray)
 {
-    int summ = 0;
-    double average = 0;
+    double summ = 0;
 
-    for (int i = 0; i < inpujitArray.GetLength(0); i++)
+    for (int i = 0; i <= inpujitArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inpujitArray.GetLength(1); j++)
+        double average = 0;
+        for (int j = 0; j <= inpujitArray.GetLength(1); j++)
         {
-            summ = inpujitArray[j,j] + inpujitArray[j,j];
-            average = summ / inpujitArray.GetLength(0);
-            Console.WriteLine("Arithmetic mean: " + average);
+            summ += inpujitArray[j, i];
         }
+        average = Math.Round(summ / inpujitArray.GetLength(1), 1);
+        Console.WriteLine($"столбца № {i+1} {average}");
     }
-
 }
 
 // //The method prints an array in yellow
@@ -59,7 +59,7 @@ void ConculeteTask(int[,] inpujitArray)
 // Console.ResetColor();
 
 
-int[,] twoDimArray = FillTowDimArray(3, 4);
+int[,] twoDimArray = FillTowDimArray(2, 3);
 PrintTwoDimArray(twoDimArray);
 
 
