@@ -1,68 +1,58 @@
-﻿//Specify a two-dimensional array of integers. Find the arithmetic mean of the elements in each column.
+﻿//Specify a two-dimensional array of integers. Find the arithmetic mean of the elements in each column.3
 
 Console.Clear();
 
-//Method for filling a two-dimensional array
-int[,] FillTowDimArray(int countRow, int countColumn)
+int n;
+int m;
+
+//The method creates an array
+double[,] CreatingAnArray()
 {
-    System.Random numberSyntezator = new System.Random();
+    Console.WriteLine("Enter n:");
+    n = Convert.ToInt32(Console.ReadLine());
 
-    int[,] outArray = new int[countRow, countColumn];
+    Console.WriteLine("Enter m:");
+    m = Convert.ToInt32(Console.ReadLine());
 
-    for (int i = 0; i < countRow; i++)
+    Console.WriteLine();
+
+    double[,] inputArray = new double[n, m];
+
+    Random numberSyntezator = new Random();
+
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < countColumn; j++)
+        for (int j = 0; j < m; j++)
         {
-            outArray[i, j] = numberSyntezator.Next(0, 101);
+            inputArray[i, j] = numberSyntezator.Next(0, 100);
+
+            Console.Write(inputArray[i, j] + "\t");
         }
+        Console.WriteLine();
     }
-    return outArray;
+    return inputArray;
 }
 
-//Method for printing a two-dimensional array
-void PrintTwoDimArray(int[,] inpujitArray)
+//The method finds the arithmetic mean
+double[] ArithmeticMean(double[,] inputArray)
 {
-    for (int i = 0; i < inpujitArray.GetLength(0); i++)
+    Console.WriteLine();
+    double[] sum = new double[m];
+    for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j < inpujitArray.GetLength(1); j++)
+        for (int j = 0; j < n; j++)
         {
-            Console.Write(inpujitArray[i, j] + " ");
+            sum[i] += inputArray[j, i];
         }
-        Console.Write("\n");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write($"Сolumn № {i + 1}:  ");
+        Console.ResetColor();
+
+        Console.WriteLine($"{(sum[i] / n)}");
     }
+    return sum;
 }
 
-//The method solves the problem 52
-void ConculeteTask(int[,] inpujitArray)
-{
-    double summ = 0;
 
-    for (int i = 0; i <= inpujitArray.GetLength(0); i++)
-    {
-        double average = 0;
-        for (int j = 0; j <= inpujitArray.GetLength(1); j++)
-        {
-            summ += inpujitArray[j, i];
-        }
-        average = Math.Round(summ / inpujitArray.GetLength(1), 1);
-        Console.WriteLine($"столбца № {i+1} {average}");
-    }
-}
-
-// //The method prints an array in yellow
-// void PrintColorTwoDimArray(int[] sum)
-// {
-//     Console.WriteLine();
-//     Console.ForegroundColor = ConsoleColor.Yellow;
-//     Console.WriteLine(sum);
-// }
-// Console.ResetColor();
-
-
-int[,] twoDimArray = FillTowDimArray(2, 3);
-PrintTwoDimArray(twoDimArray);
-
-
-ConculeteTask(twoDimArray);
-// PrintColorTwoDimArray(twoDimArray);
-
+double[,] resultArray = CreatingAnArray();
+ArithmeticMean(resultArray);
