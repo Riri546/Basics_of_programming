@@ -1,10 +1,6 @@
 ﻿//Create a frequency dictionary of elements of a two-dimensional array. 
 //The frequency dictionary contains information about. how many times do the input data elements occur
 
-//array = [1, 2, 3, 4, 9, 7, 8, 1, 2, 1, 6, 5, 6]
-//alphadet = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-//freqmency = [3,2,1,1...]
-
 Console.Clear();
 
 //Method for filling a two-dimensional array
@@ -17,7 +13,7 @@ int[,] FillTowDimArray(int countRow, int countColumn)
     {
         for (int j = 0; j < countColumn; j++)
         {
-            outArray[i, j] = numberSyntezator.Next(0, 101);
+            outArray[i, j] = numberSyntezator.Next(0, 10);
         }
     }
     return outArray;
@@ -41,11 +37,11 @@ void PrintColorTwoDimArray(int[,] inputArray)
 
 
 //The method swaps the first and the next line
-int[] FreqmancyCollect(int[,] inputArray)
+int[] FreqmancyCollect(int[,] inputArray, int alphadetLength)
 {
     Console.WriteLine();
 
-    int[] resultArray = new int[101];
+    int[] resultArray = new int[alphadetLength];
     int i = 0; int j = 0;
 
     while (i < inputArray.GetLength(0))
@@ -53,47 +49,46 @@ int[] FreqmancyCollect(int[,] inputArray)
         j = i;
         while (j < inputArray.GetLength(0))
         {
+            //array = [0,1,3,1,2,1,3,1,2,2]
+            //alphadet = [0,1,2,3]
+            //freqmency = [2,4,3,2]
+
             //We collect the frequency of occurrence of elements
             resultArray[inputArray[i, j]]++;
             j++;
         }
         i++;
     }
-    return inputArray;
+    return resultArray;
 }
 
 
 //The method outputs a random array of numbers to the console
-void PrintIntArray(int[] inputArray)
+void PrintIntArray(int[] resultArray)
 {
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.Write("Alphabet frequency: ");
+    Console.ResetColor();
 
-
-    for (i = 0; i < inputArray.Length - 1; i++;)
+    int i;
+    for (i = 0; i < resultArray.Length - 1; i++)
     {
-    Console.Write(inputArray[i] + ", ");
+        Console.Write(resultArray[i] + ", ");
+    }
+    Console.WriteLine(resultArray[i]);
 }
-Console.WriteLine(inputArray[i]);
-}
-
-
 
 //The body of the task, launches the ce methods
 void Result()
 {
     DateTime d1 = DateTime.Now;
 
-    int[,] twoDimArray = FillTowDimArray(3, 3);
+    int[,] twoDimArray = FillTowDimArray(10, 10);
     PrintColorTwoDimArray(twoDimArray);
+    Console.WriteLine();
 
-    if (twoDimArray.GetLength(0) != twoDimArray.GetLength(1))
-    {
-        Console.WriteLine();
-        Console.WriteLine("This array inverts the error!");
-    }
-    else
-    {
-        PrintColorTwoDimArray(RotateTwoDimArray(twoDimArray));
-    }
+    int[] freqmancy = FreqmancyCollect(twoDimArray, 10);
+    PrintIntArray(freqmancy);
 
     Console.WriteLine();
 
