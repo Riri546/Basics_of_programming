@@ -39,28 +39,40 @@ void PrintColorTwoDimArray(int[,] inputArray)
     Console.ResetColor();
 }
 
+
 //The method swaps the first and the next line
-int[,] RotateTwoDimArray(int[,] inputArray)
+int[] FreqmancyCollect(int[,] inputArray)
 {
     Console.WriteLine();
 
-    int buferElement = 0;
-    int i = 0;
-    int j = 0;
+    int[] resultArray = new int[101];
+    int i = 0; int j = 0;
 
     while (i < inputArray.GetLength(0))
     {
         j = i;
         while (j < inputArray.GetLength(0))
         {
-            buferElement = inputArray[i, j];
-            inputArray[i, j] = inputArray[j, i];
-            inputArray[j, i] = buferElement;
+            //We collect the frequency of occurrence of elements
+            resultArray[inputArray[i, j]]++;
             j++;
         }
         i++;
     }
     return inputArray;
+}
+
+
+//The method outputs a random array of numbers to the console
+void PrintIntArray(int[] inputArray)
+{
+
+
+    for (i = 0; i < inputArray.Length - 1; i++;)
+    {
+    Console.Write(inputArray[i] + ", ");
+}
+Console.WriteLine(inputArray[i]);
 }
 
 
