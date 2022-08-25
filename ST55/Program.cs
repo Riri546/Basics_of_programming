@@ -19,7 +19,7 @@ int[,] FillTowDimArray(int countRow, int countColumn)
     return outArray;
 }
 
-//The method prints an array in yellow
+//The method prints an array in green
 void PrintColorTwoDimArray(int[,] inputArray)
 {
     Console.ForegroundColor = ConsoleColor.Green;
@@ -35,8 +35,7 @@ void PrintColorTwoDimArray(int[,] inputArray)
     Console.ResetColor();
 }
 
-
-//The method swaps the first and the next line
+//Solution task 55
 int[] FreqmancyCollect(int[,] inputArray, int alphadetLength)
 {
     Console.WriteLine();
@@ -61,7 +60,6 @@ int[] FreqmancyCollect(int[,] inputArray, int alphadetLength)
     }
     return resultArray;
 }
-
 
 //The method outputs a random array of numbers to the console
 void PrintIntArray(int[] resultArray)
