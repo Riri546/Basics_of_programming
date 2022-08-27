@@ -22,8 +22,6 @@ int[,] FillTowDimArray(int countRow, int countColumn)
 //The method prints an array in yellow
 void PrintColorTwoDimArray(int[,] inputArray)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
-
     for (int i = 0; i < inputArray.GetLength(0); i++)
     {
         for (int j = 0; j < inputArray.GetLength(1); j++)
@@ -32,34 +30,34 @@ void PrintColorTwoDimArray(int[,] inputArray)
         }
         Console.Write("\n");
     }
-    Console.ResetColor();
 }
 
-//
-int[,] RotateTwoDimArray(int[,] inputArray)
+//Solution task 56
+int[,] Update2_DArray(int[,] inputArray, int row, int column)
 {
     Console.WriteLine();
+    int[,] outArray = new int[inputArray.GetLength(0) - 1, inputArray.GetLength(1) - 1];
 
-    int buferElement = 0;
-    int i = 0;
-    int j = 0;
+    int k = 0; int m = 0;
 
-    while (i < inputArray.GetLength(0))
+    for (int i = 0; i < inputArray.GetLength(0); i++)
     {
-        j = i;
-        while (j < inputArray.GetLength(0))
+        m = 0;
+        for (int j = 0; j < inputArray.GetLength(1); j++)
         {
-            buferElement = inputArray[i, j];
-            inputArray[i, j] = inputArray[j, i];
-            inputArray[j, i] = buferElement;
-            j++;
+            if (i != row && j != column)
+            {
+                outArray[k, m] = inputArray[i, j];
+            }
+
+            if (j != column) m++;
         }
-        i++;
+        if (i != row) k++;
     }
-    return inputArray;
+    return outArray;
 }
 
-//
+//Print solution task 56
 int[] FindMinElement(int[,] matrix)
 {
     int[] array = new int[] { 0, 0 };
@@ -69,7 +67,7 @@ int[] FindMinElement(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (matrix[i, j] == minElement)
+            if (matrix[i, j] < minElement)
             {
                 minElement = matrix[i, j];
 
@@ -81,24 +79,25 @@ int[] FindMinElement(int[,] matrix)
     return array;
 }
 
-
 //The body of the task, launches the ce methods
 void Result()
 {
     DateTime d1 = DateTime.Now;
 
-    int[,] twoDimArray = FillTowDimArray(3, 3);
+    Console.ForegroundColor = ConsoleColor.Magenta;
+    int[,] twoDimArray = FillTowDimArray(5, 5);
     PrintColorTwoDimArray(twoDimArray);
+    Console.ResetColor();
 
-    if (twoDimArray.GetLength(0) != twoDimArray.GetLength(1))
-    {
-        Console.WriteLine();
-        Console.WriteLine("This array inverts the error!");
-    }
-    else
-    {
-        PrintColorTwoDimArray(RotateTwoDimArray(twoDimArray));
-    }
+    Console.WriteLine();
+
+    int[] indexes = FindMinElement(twoDimArray);
+    Console.WriteLine(indexes[0] + " " + indexes[1]);
+
+    Console.ForegroundColor = ConsoleColor.Blue;
+    int[,] buferTwoDimArray = Update2_DArray(twoDimArray, indexes[0], indexes[1]);
+    PrintColorTwoDimArray(buferTwoDimArray);
+    Console.ResetColor();
 
     Console.WriteLine();
 
