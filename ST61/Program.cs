@@ -8,9 +8,10 @@ Console.Clear();
 //Creating a three-dimensional array
 int[,,] Fill3DArray(int m, int n, int l)
 {
+    int[,,] outArray = new int[m, n, l];
+
     List<int> list = new List<int>();
 
-    int[,,] outArray = new int[m, n, l];
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
