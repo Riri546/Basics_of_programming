@@ -3,8 +3,6 @@
 
 Console.Clear();
 
-
-
 //Method for filling a two-dimensional array
 int[,] FillTowDimArray(int countRow, int countColumn)
 {
@@ -34,8 +32,7 @@ void PrintColorTwoDimArray(int[,] inputArray)
     }
 }
 
-
-// метот выдаёт индекс наименьшего элемента
+//The method outputs the index of the smallest element
 int FindMinIndex(int[] inputArray)
 {
     int index = 0; int min = inputArray[0]; int i = 0;
@@ -52,7 +49,7 @@ int FindMinIndex(int[] inputArray)
     return index;
 }
 
-// метод считает сумму элементов в строке 
+//The method counts the sum of elements in a row
 int SummRows(int[,] inputArray, int row)
 {
     int i = 0; int sum = 0;
@@ -64,7 +61,7 @@ int SummRows(int[,] inputArray, int row)
     return sum;
 }
 
-// метод выдаёт номер строки с наименьшей суммой элементов
+//The method outputs the row number with the smallest sum of elements
 int FindRow(int[,] inputArray)
 {
     int i = 0;
@@ -77,14 +74,13 @@ int FindRow(int[,] inputArray)
     return FindMinIndex(sum) + 1;
 }
 
-
 //The body of the task, launches the ce methods
 void Result()
 {
     DateTime d1 = DateTime.Now;
 
     Console.ForegroundColor = ConsoleColor.Magenta;
-    Console.WriteLine("Исходный массив: ");
+    Console.WriteLine("Source array: ");
     Console.ResetColor();
 
     int[,] twoDimArray = FillTowDimArray(3, 2);
@@ -93,12 +89,12 @@ void Result()
     Console.WriteLine();
 
     Console.ForegroundColor = ConsoleColor.Blue;
-    Console.Write("Номер строки с наименьшей суммой элементов: ");
+    Console.Write("The number of the row with the smallest sum of elements: ");
     Console.ResetColor();
     Console.WriteLine(FindRow(twoDimArray));
 
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.Write("Сумма строки: ");
+    Console.Write("Sum of lines: ");
     Console.ResetColor();
     Console.WriteLine(SummRows(twoDimArray, 0));
 
