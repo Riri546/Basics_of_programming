@@ -59,7 +59,7 @@ void Result()
     DateTime d1 = DateTime.Now;
 
     Console.ForegroundColor = ConsoleColor.Magenta;
-    Console.WriteLine("Исходный массив: ");
+    Console.WriteLine("Source array: ");
     Console.ResetColor();
 
     int[,] twoDimArray = FillTowDimArray(3, 3);
@@ -68,7 +68,7 @@ void Result()
     Console.WriteLine();
 
     Console.ForegroundColor = ConsoleColor.Blue;
-    Console.WriteLine("Отсортированный массив: ");
+    Console.WriteLine("Sorted array: ");
     Console.ResetColor();
 
     int[,] resultArray = OrderArrayLines(twoDimArray);

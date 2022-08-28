@@ -3,6 +3,8 @@
 
 Console.Clear();
 
+
+
 //Method for filling a two-dimensional array
 int[,] FillTowDimArray(int countRow, int countColumn)
 {
@@ -22,8 +24,6 @@ int[,] FillTowDimArray(int countRow, int countColumn)
 //The method prints an array in yellow
 void PrintColorTwoDimArray(int[,] inputArray)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
-
     for (int i = 0; i < inputArray.GetLength(0); i++)
     {
         for (int j = 0; j < inputArray.GetLength(1); j++)
@@ -32,29 +32,49 @@ void PrintColorTwoDimArray(int[,] inputArray)
         }
         Console.Write("\n");
     }
-    Console.ResetColor();
 }
 
-int[] FindMinElement(int[,] inputArray)
+
+// метот выдаёт индекс наименьшего элемента
+int FindMinIndex(int[] inputArray)
 {
-    int[] array = new int[] { 0, 0 };
-    int minElement = int.MaxValue;
+    int index = 0; int min = inputArray[0]; int i = 0;
 
-    for (int i = 0; i < inputArray.GetLength(0); i++)
+    while (i < inputArray.Length)
     {
-        for (int j = 0; j < inputArray.GetLength(1); j++)
+        if (min > inputArray[i])
         {
-            if (inputArray[i, j] < minElement)
-            {
-                minElement = inputArray[i, j];
-
-                array[0] = i;
-                array[1] = j;
-            }
+            min = inputArray[i];
+            index = i;
         }
+        i++;
     }
-    Console.WriteLine("Min: " + minElement);
-    return array;
+    return index;
+}
+
+// метод считает сумму элементов в строке 
+int SummRows(int[,] inputArray, int row)
+{
+    int i = 0; int sum = 0;
+    while (i < inputArray.GetLength(1))
+    {
+        sum += inputArray[row, i];
+        i++;
+    }
+    return sum;
+}
+
+// метод выдаёт номер строки с наименьшей суммой элементов
+int FindRow(int[,] inputArray)
+{
+    int i = 0;
+    int[] sum = new int[inputArray.GetLength(0)];
+    while (i < inputArray.GetLength(0))
+    {
+        sum[i] = SummRows(inputArray, i);
+        i++;
+    }
+    return FindMinIndex(sum) + 1;
 }
 
 
@@ -64,16 +84,23 @@ void Result()
     DateTime d1 = DateTime.Now;
 
     Console.ForegroundColor = ConsoleColor.Magenta;
-    int[,] twoDimArray = FillTowDimArray(5, 5);
-    PrintColorTwoDimArray(twoDimArray);
+    Console.WriteLine("Исходный массив: ");
     Console.ResetColor();
+
+    int[,] twoDimArray = FillTowDimArray(3, 2);
+    PrintColorTwoDimArray(twoDimArray);
 
     Console.WriteLine();
 
-    int[] indexes = FindMinElement(twoDimArray);
+    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.Write("Номер строки с наименьшей суммой элементов: ");
+    Console.ResetColor();
+    Console.WriteLine(FindRow(twoDimArray));
 
-
-
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.Write("Сумма строки: ");
+    Console.ResetColor();
+    Console.WriteLine(SummRows(twoDimArray, 0));
 
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.Write("Solution time: ");
