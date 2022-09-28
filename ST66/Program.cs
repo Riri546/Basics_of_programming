@@ -6,8 +6,6 @@ Console.Clear();
 int numberA = ReadData("Set the number A: ");
 int numberB = ReadData("Set the number B: ");
 
-
-
 int ReadData(string line)
 {
     Console.WriteLine(line);
