@@ -1,2 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// 
+Console.Clear();
+
+int number = ReadData("Set the number: ");
+Console.WriteLine(Sum(number));
+
+int ReadData(string line)
+{
+    Console.WriteLine(line);
+    return int.Parse(Console.ReadLine() ?? "");
+}
+
+int Sum(int num)
+{
+    if (num > 0)
+    {
+        return num % 10 + Sum(num / 10);
+    }
+    else
+    {
+        return 0;
+    }
+}
