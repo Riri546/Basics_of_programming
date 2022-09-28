@@ -1,4 +1,5 @@
 ﻿//Write a program that will accept a number as input and return the sum of its numbers. 
+
 Console.Clear();
 
 int number = ReadData("Set the number: ");
