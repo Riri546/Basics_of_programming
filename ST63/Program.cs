@@ -5,7 +5,7 @@ Console.Clear();
 
 int ReadData()
 {
-    Console.WriteLine("Задайте число: ");
+    Console.WriteLine("Set the number: ");
     return int.Parse(Console.ReadLine() ?? "");
 }
 
@@ -19,5 +19,5 @@ int NuturalNumberPrinter(int num)
     }
     return num;
 }
- int inputNumber = ReadData();
- NuturalNumberPrinter(inputNumber);
+int inputNumber = ReadData();
+NuturalNumberPrinter(inputNumber);
