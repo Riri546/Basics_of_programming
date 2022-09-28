@@ -13,8 +13,11 @@ int ReadData(string line)
 
 void NuturalNumberPrinter(int m, int n)
 {
-    if(m-1==n) return;
+    if (m - 1 == n) return;
     {
-        Console.Write
+        Console.Write(m + " ");
+        NuturalNumberPrinter(m + 1, n);
     }
 }
+
+NuturalNumberPrinter(numberM, numberN);
