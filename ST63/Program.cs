@@ -19,5 +19,6 @@ int NuturalNumberPrinter(int num)
     }
     return num;
 }
+
 int inputNumber = ReadData();
 NuturalNumberPrinter(inputNumber);

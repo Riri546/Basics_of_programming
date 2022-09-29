@@ -12,7 +12,7 @@ int ReadData(string line)
 
 void NuturalNumberPrinter(int m, int n)
 {
-    if (m - 1 == n) return;
+    if (n == m +1 ) return;
     {
         Console.Write(m + " ");
         NuturalNumberPrinter(m + 1, n);
@@ -20,3 +20,17 @@ void NuturalNumberPrinter(int m, int n)
 }
 
 NuturalNumberPrinter(numberM, numberN);
+
+int Sum(int m, int n)
+{
+    int sum = 0;
+
+    if (m - 1 == n) return 1;
+    {
+        sum += m;
+        Console.Write(m + " ");
+        Sum(m + 1, n);
+    }
+    Console.WriteLine(sum);
+    return sum;
+}
