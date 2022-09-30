@@ -5,7 +5,6 @@ Console.Clear();
 int numberM = ReadData("Set the number M: ");
 int numberN = ReadData("Set the number N: ");
 
-
 int ReadData(string line)
 {
     Console.WriteLine(line);
@@ -13,15 +12,21 @@ int ReadData(string line)
 }
 
 
-void SumNuturalNumber (int m, int n, int sum)
+// функция сумма чисел от M до N
+int SumMN(int m, int n)
 {
-    if (m > n) 
+    int res = m;
+    if (m == n)
+        return 0;
+    else
     {
-        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
-        return;
+        m++;
+        res = m + SumMN(m, n);
+        return res;
     }
-    sum += (++m);
-    SumNuturalNumber(numberM, numberN, sum);
 }
 
-SumNuturalNumber(numberM, numberN, 0);
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.Write("Answer: ");
+Console.ResetColor();
+SumMN(numberM, numberN);
