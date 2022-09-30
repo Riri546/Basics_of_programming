@@ -12,3 +12,16 @@ int ReadData(string line)
     return int.Parse(Console.ReadLine() ?? "");
 }
 
+
+void SumNuturalNumber (int m, int n, int sum)
+{
+    if (m > n) 
+    {
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
+        return;
+    }
+    sum += (++m);
+    SumNuturalNumber(numberM, numberN, sum);
+}
+
+SumNuturalNumber(numberM, numberN, 0);

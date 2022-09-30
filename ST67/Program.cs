@@ -27,8 +27,6 @@ void NuturalNumberPrinter(int m, int n)
 //The body of the task, launches the ce methods
 void Result()
 {
-    DateTime d1 = DateTime.Now;
-
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.Write("Answer: ");
     Console.ResetColor();
