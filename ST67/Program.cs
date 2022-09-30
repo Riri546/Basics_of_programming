@@ -1,4 +1,5 @@
 ﻿//Set the values of M and N. Write a program that outputs all natural numbers in the range from M to N.
+
 Console.Clear();
 
 int numberM = ReadData("Set the number M: ");
